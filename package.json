@@ -1,0 +1,27 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "learing and revising basics",
+  "keywords": [
+    "react",
+    "basics",
+    "react"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "not now"
+  },
+  "license": "ISC",
+  "author": "shubham",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.4"
+  },
+  "dependencies": {
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  }
+}

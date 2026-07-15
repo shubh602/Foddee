@@ -10,26 +10,24 @@ import ReactDOM from "react-dom/client";
 
 // Both are same
 
-const parent=React.createElement("div",
-  {id:"parent"},
-[React.createElement("div",
-  {id:"child1"},
-  [React.createElement("h1",{id:"heading1"},"hello world"),React.createElement("h1",{id:"heading2"},"hello world")]),
-  React.createElement("div",
-    {id:"child2"},
-  [React.createElement("h1",{id:"heading1"},"hello world"),React.createElement("h1",{id:"heading2"},"hello world")])])
+
+let Info = () => (
+  <div>
+      <h2>this is info </h2>
+  </div>
+)
 
 
+// component composition
+let Heading = (<div>
+   <h1>This is heading ✌️</h1> 
+   <Info />
+   </div>);
 
 
 
 const root= ReactDOM.createRoot(document.getElementById("root"));  
-root.render(parent)
-
-
-
-
-
+root.render(Heading)
 
 
 

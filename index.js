@@ -1,33 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css";
+import Header from "./src/Component/Header";
+import Body from "./src/Component/Body";
+import Footer from "./src/Component/Footer";
 
 
-
-// const heading= React.createElement("h1",{id:"heading"},"hello world");
-// const child=React.createElement("div",{id:"child"},[heading,heading])
-// const parent=React.createElement("div",{id:"parent"},[child,child])
-
-
-// Both are same
-
-
-let Info = () => (
-  <div>
-      <h2>this is info </h2>
-  </div>
-)
-
-
-// component composition
-let Heading = (<div>
-   <h1>This is heading ✌️</h1> 
-   <Info />
-   </div>);
-
+    let App = () =>(
+    <> 
+       <Header />   
+       <Body />
+       <Footer />
+    </>
+    );
 
 
 const root= ReactDOM.createRoot(document.getElementById("root"));  
-root.render(Heading)
+root.render(<App />)
 
 
 

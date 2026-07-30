@@ -1,0 +1,101 @@
+*{
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+/*----------------------- header --------------------------------- */
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+}
+.logo img{
+    height:80px;
+    cursor: pointer;
+}
+
+.nav{
+    display: flex;
+    column-gap: 45px;
+}
+
+.nav .nav-link{
+    cursor: pointer;
+    font-size: 18px; 
+}
+
+/*----------------------- Body --------------------------------- */
+.body-container{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 50px;
+    column-gap: 30px;
+    padding: 10px 10px;
+    justify-content: baseline;
+}
+
+.product-cart{
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    height: 350px;
+    width: 260px;
+    padding: 8px;
+    row-gap: 8px;
+    box-shadow: 0px 4px 8px rgb(188, 184, 184);
+}
+
+.product-cart:hover{
+    box-shadow: 0px 4px 8px rgb(78, 76, 76);
+}
+
+.product-cart .cart-img{
+    height: 200px;
+    width: 100%;
+}
+
+.cart-detail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.cart-star{
+    height:25px;
+    padding-left:5px;
+}
+.cart-desc{
+    font-size: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.cart-desc-logo{
+    font-weight: 25px;
+    font-weight: bolder;
+}
+
+
+/*----------------------- Footer --------------------------------- */
+.footer-container{
+  margin:0px 10px;  
+  border-top: 8px solid gray;
+  border-top-left-radius:20px;  
+  border-top-right-radius:20px;  
+  padding: 10px 10px;
+  padding-top:30px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.filter-btn{
+    margin-left: 20px;
+        padding:3px;
+    cursor: pointer;
+}

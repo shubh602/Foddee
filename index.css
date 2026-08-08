@@ -21,12 +21,19 @@
 .nav{
     display: flex;
     column-gap: 45px;
+    align-items: center;
 }
 
 .nav .nav-link{
     cursor: pointer;
     font-size: 18px; 
 }
+
+.login-btn{
+    padding: 8px;
+    cursor: pointer;
+}
+
 
 /*----------------------- Body --------------------------------- */
 .body-container{
@@ -42,11 +49,12 @@
     display: flex;
     cursor: pointer;
     flex-direction: column;
-    height: 350px;
-    width: 260px;
+    height: 450px;
+    width: 350px;
     padding: 8px;
     row-gap: 8px;
     box-shadow: 0px 4px 8px rgb(188, 184, 184);
+    border-radius: 20px;
 }
 
 .product-cart:hover{
@@ -54,8 +62,17 @@
 }
 
 .product-cart .cart-img{
-    height: 200px;
+    height: 300px;
     width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+   border-radius: 20px;
+   transition: transform 400ms ease;
+}
+
+
+.product-cart:hover img {
+  transform: scale(0.92);
 }
 
 .cart-detail{
@@ -80,12 +97,40 @@
 }
 
 
+/* filter */
+.filters{
+    display: flex;
+    gap: 10px;
+    padding: 0px 20px;
+    justify-content: end;
+}
+
+.search-input{
+    width: 300px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.search-btn{
+    margin-left:5px;
+    padding:3px;
+    cursor: pointer;
+}
+
+.filter-btn{
+    margin-left: 20px;
+    padding:3px;
+    cursor: pointer;
+}
+
+
+
+
 /*----------------------- Footer --------------------------------- */
 .footer-container{
-  margin:0px 10px;  
-  border-top: 8px solid gray;
-  border-top-left-radius:20px;  
-  border-top-right-radius:20px;  
+  margin:0px 10px;
+  margin-top: 50px;  
+  border-top: 2px solid gray;
   padding: 10px 10px;
   padding-top:30px;
   display: flex;
@@ -94,8 +139,21 @@
   font-size: 14px;
 }
 
-.filter-btn{
-    margin-left: 20px;
-        padding:3px;
+
+
+
+
+
+/* shimmer cart */
+.shimmer-cart{
+     display: flex;
     cursor: pointer;
+    flex-direction: column;
+    height: 450px;
+    width: 350px;
+    padding: 8px;
+    row-gap: 8px;
+    box-shadow: 0px 4px 8px rgb(188, 184, 184);
+    border-radius: 20px;
+    background: #a09e9e;
 }

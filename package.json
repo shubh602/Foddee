@@ -16,14 +16,15 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest",
-    "start":"parcel index.html",
-    "built":"parcel built index.html"
+    "start": "parcel index.html",
+    "built": "parcel built index.html"
   },
   "devDependencies": {
     "parcel": "^2.16.4"
   },
   "dependencies": {
     "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react-dom": "^19.2.7",
+    "react-router-dom": "^6.30.4"
   }
 }

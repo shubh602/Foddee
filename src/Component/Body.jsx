@@ -43,7 +43,7 @@ return (!list.length)? <Shimmer /> : (
 
         <button className="filter-btn"
         onClick={()=>{
-          let filterData=list.filter((res)=>res.info.avgRating>4.3)   
+          let filterData=list.filter((res)=>res.info.avgRating>=4.3)   
           setShowList(filterData)
         }}
         >FILTER</button>

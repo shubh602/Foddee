@@ -95,30 +95,35 @@
     font-weight: 25px;
     font-weight: bolder;
 }
+.cart-rating{
+    display: flex;
+    align-items: center;
+}
 
 
 /* filter */
 .filters{
     display: flex;
     gap: 10px;
-    padding: 0px 20px;
-    justify-content: end;
+    padding: 30px 30px;
 }
 
 .search-input{
     width: 300px;
-    height: 25px;
+    height: 30px;
     border-radius: 5px;
 }
 
 .search-btn{
     margin-left:5px;
+    height: 25px;
     padding:3px;
     cursor: pointer;
 }
 
 .filter-btn{
     margin-left: 20px;
+    height: 25px;
     padding:3px;
     cursor: pointer;
 }

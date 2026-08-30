@@ -1,6 +1,6 @@
 import { Component } from "react";
-import User from "./User";
 import UserClass from "./UserClass";
+import { userContext } from "../utils/UserContext.js";
 
 
 // const About = () =>{
@@ -10,17 +10,17 @@ import UserClass from "./UserClass";
 class About extends Component{
     constructor(props){
         super(props)
-       console.log(" Parent Constructor");
+    //    console.log(" Parent Constructor");
        
     }
 
     componentDidMount(){
-       console.log(" parent Mount");
+    //    console.log(" parent Mount");
        
     }
 
     render(){
-       console.log(" parent Render");
+    //    console.log(" parent Render");
        
       return( <div>
           <h1>About Us</h1>

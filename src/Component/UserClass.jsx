@@ -1,4 +1,6 @@
 import React from "react"
+import { userContext } from "../utils/UserContext.js";
+
 
 class UserClass extends React.Component{
 
@@ -9,17 +11,17 @@ constructor(props){
             count:0,
             count2:2,
         }
-    console.log(this.props.name + " constructor");
+    // console.log(this.props.name + " constructor");
 
 }
 
 componentDidMount(){
-    console.log(this.props.name + " component mounted");
+    // console.log(this.props.name + " component mounted");
     
 }
     
 render(){
-    console.log(this.props.name + " component render");
+    // console.log(this.props.name + " component render");
 
             const {name , location}=this.props;
             const {count ,count2}=this.state;
@@ -38,7 +40,13 @@ render(){
                     <span>Count2 :</span> <span>{count2}</span>
                 </h2>
                 <h2>
-                    <span>(Class) Name :</span> <span>{name}</span>
+                    <span> Name :</span> <span>
+                        <userContext.Consumer>
+                          {(data)=>data.Username
+                          }
+                        </userContext.Consumer>
+                        {"_"+name}
+                        </span>
                 </h2>
                 <h2>
                     <span>Location :</span> <span>{location}</span>

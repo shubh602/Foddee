@@ -7,3 +7,7 @@ export const Logo="https://cdn.dribbble.com/userupload/28890089/file/original-8c
 export const Swiggy_Image_CDN="https://media-assets.swiggy.com/swiggy/image/upload/";
 
 export const MenuDetail="https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.4712374&lng=81.6829431&restaurantId=723574";
+
+
+
+

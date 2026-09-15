@@ -26,7 +26,7 @@ export const MenuList1=({props,color})=>{
                 itemCards.map((item)=>{
                     
                    return(show && 
-                     <MenuListCard key={item.card.info.id} props={item.card.info} />
+                     <MenuListCard key={item.card.info.id} flag={true} props={item.card.info} />
                     )
                     
                 })

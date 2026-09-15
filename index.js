@@ -11,34 +11,47 @@ import Error from "./src/Component/Error";
 import About from "./src/Component/About";
 import Cart from "./src/Component/Cart";
 import MenuPage from "./src/Component/MenuPage";
-import { userContext } from "./src/utils/UserContext";
+import { userContext , DarkLight} from "./src/utils/UserContext";
+import { Provider } from "react-redux";
+import Appstore from "./src/utils/appStore";
 
 
 
-    const Grocery=lazy(()=>import("./src/Component/grocery"))
+    const Grocery=lazy(()=>import("./src/Component/Grocery"))
     
 
   
     let App = () =>{
  
       const [info,setInfo]=useState()
+      const [mode,setMode]=useState(false)
+
 
     const user=useContext(userContext)
+    // const flag=useContext(DarkLight)
+
       
     useEffect(()=>{
       setInfo(user.Username)
-      // console.log(info);
-
     },[])
+
+    useEffect(()=>{
+        if(mode)document.documentElement.classList.add("dark");
+        else document.documentElement.classList.remove("dark");
+        
+        
+          
+    },[mode])
     
      
 
-        return(<> 
-          <userContext.Provider value={{Username:info,setInfo:setInfo}}>
+        return(
+        <Provider store={Appstore}> 
+          <userContext.Provider value={{Username:info,setInfo:setInfo,mode:mode,setMode:setMode}}>
               <Header />   
               <Outlet />  
           </userContext.Provider>    
-            </>
+            </Provider>
             )};
 
 const appRouter= createBrowserRouter([
@@ -48,11 +61,7 @@ const appRouter= createBrowserRouter([
         children:[
           {
             path:'/',
-            element:
-            <>
-            <Body />
-            <Footer />
-            </>
+            element:<Body />
           }, 
           {
             path:'/contact',

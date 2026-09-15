@@ -16,6 +16,7 @@ export const MenuList2=({props})=>{
                            key={item.categoryId}
                            props={item}
                            color={true}
+                           flag={true}
                      />
             })
         }

@@ -18,8 +18,9 @@ const MenuPage=()=>{
     
    
      
+ console.log(Menu);
     
-if(Menu.length === 0) return <Shimmer />
+if(Menu === undefined || Menu.length === 0) return <Shimmer />
 
 let {name,cloudinaryImageId,avgRating,cuisines,areaName,sla} =Menu[2]?.card?.card?.info;
 
@@ -28,14 +29,15 @@ let {name,cloudinaryImageId,avgRating,cuisines,areaName,sla} =Menu[2]?.card?.car
         
 
     return(
-        <div className="py-5 px-2 w-8/12 mx-auto flex flex-col space-y-8">
+        <div className="dark:bg-black dark:text-white">
+        <div className="pt-32 pb-5 px-2 lg:w-8/12 mx-auto flex flex-col space-y-8 dark:bg-gray-950">
                 
                <div className="flex flex-col space-y-6">
                    <span className="font-bold text-3xl">{name}</span>
                    <img className="h-[450px] w-full rounded-2xl object-cover" src={Swiggy_Image_CDN + cloudinaryImageId} alt="" />
                    <div className="pb-2 flex flex-col space-y-1 font-bold border-b-2 border-gray-300">
                           <span><span className="text-gray-500">&#x2605;</span> {avgRating} </span>
-                          <span className="text-orange-500 underline cursor-pointer">{cuisines.join(" , ")}</span>
+                          <span className="text-orange-500 cursor-pointer">{cuisines.join(" , ")}</span>
                    </div>
                    <div className="pb-2 flex flex-col space-y-1 font-bold border-b-2 border-gray-300">
                           <span><span>Outlet :</span> {areaName} </span>
@@ -77,6 +79,7 @@ let {name,cloudinaryImageId,avgRating,cuisines,areaName,sla} =Menu[2]?.card?.car
         {/* Accordian end */}
          
         </div>
+    </div>    
     )
 }
 

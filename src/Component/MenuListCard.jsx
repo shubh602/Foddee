@@ -1,9 +1,28 @@
 import { Swiggy_Image_CDN } from "../utils/constant";
+import { addCart, removeCart } from "../utils/cartslice";
+import { useDispatch, useSelector } from "react-redux";
 
-const MenuListCard=(props)=>{
+const MenuListCard=({props,flag})=>{
 
 
-    const {name,isVeg,price,defaultPrice,finalPrice,ratings,imageId}=props.props;
+    const {name,isVeg,price,defaultPrice,finalPrice,ratings,imageId}=props;
+
+    const dispatch=useDispatch()
+
+    const CartItems=useSelector((store)=>store.cart.items)
+
+    const addItem=(props)=>{
+       if(CartItems.length < 99) dispatch(addCart(props))
+       else if(CartItems.length >= 99)alert("too many items");
+    }
+
+    const removeItem=(props)=>{
+        console.log(props);
+        
+        dispatch(removeCart(props.id))
+    }
+
+    
 
     return(
         <div className="flex items-center justify-between p-5 border-b border-gray-500">
@@ -15,7 +34,11 @@ const MenuListCard=(props)=>{
             </div>
             <div className="flex flex-col items-center">
                 <img className="h-28 w-36 rounded-xl" src={Swiggy_Image_CDN+imageId} alt="" />
-                <span className="bg-black text-white w-fit px-7 py-2 rounded-lg -mt-4 font-semibold cursor-pointer">+ Add</span>
+                <span className="bg-black dark:bg-gray-300 dark:text-black text-white w-fit px-7 py-2 rounded-lg -mt-4 font-semibold cursor-pointer"
+                 onClick={flag?()=>addItem(props):()=>removeItem(props)}
+                >
+                    {flag?"+ Add":"Remove"}
+                </span>
             </div>
         </div>
     )
